@@ -41,8 +41,7 @@ set termguicolors
 colorscheme tender
 
 
-""" copy from .vimrc  """
-
+""" copy from .vimrc
 set nocompatible "viとの互換性をなくす"
 set autoindent "改行時に前の行のインデントを継続する"
 set smartcase "改行時にスマートなインデントを行う"
@@ -63,3 +62,47 @@ set showmatch "対応する括弧を表示"
 set shiftwidth=4
 set expandtab
 """""""""""""""""""""""""
+
+""" for vim-latex"" Vim-LaTeX
+filetype plugin on
+filetype indent on
+set shellslash
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+let g:Imap_UsePlaceHolders = 1
+let g:Imap_DeleteEmptyPlaceHolders = 1
+let g:Imap_StickyPlaceHolders = 0
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_FormatDependency_ps = 'dvi,ps'
+let g:Tex_FormatDependency_pdf = 'dvi,pdf'
+let g:Tex_CompileRule_dvi = 'platex --shell-escape -synctex=1 -interaction=nonstopmode $*'
+let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
+let g:Tex_CompileRule_pdf = 'dvipdfmx $*.dvi'
+let g:Tex_BibtexFlavor = 'pbibtex'
+let g:Tex_MakeIndexFlavor = 'mendex $*.idx'
+let g:Tex_UseEditorSettingInDVIViewer = 1
+let g:Tex_ViewRule_dvi = 'pxdvi -watchfile 1'
+let g:Tex_ViewRule_ps = 'gv --watch'
+let g:Tex_ViewRule_pdf = 'evince'
+let g:Tex_AutoFolding = 0
+let g:Tex_IgnoredWarnings =
+    \'Underfull'."\n".
+    \'Overfull'."\n".
+    \'specifier changed to'."\n".
+    \'You have requested'."\n".
+    \'Missing number, treated as zero.'."\n".
+    \'There were undefined references'."\n".
+    \'Citation %.%# undefined'."\n".
+    \"Font shape \`JT1/gt/m/it\' undefined"."\n".
+    \"Font shape \`JY1/gt/m/it\' undefined"."\n".
+    \"Font shape \`JT1/mc/m/it\' undefined"."\n".
+    \"Font shape \`JY1/mc/m/it\' undefined"."\n".
+    \'LaTeX Font Warning: Some font shapes were not available, defaults substituted.'
+let g:Tex_IgnoreLevel = 12
+""""""""""""""""""
+
+"Cで括弧の補完"
+au BufNewFile,BufRead *.c inoremap {<Enter> {}<Left><CR><ESC><S-o>
+
+"C++で括弧の補完"
+au BufNewFile,BufRead *.cpp inoremap {<Enter> {}<Left><CR><ESC><S-o>

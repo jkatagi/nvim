@@ -6,3 +6,4 @@ After cloning this repository, please enable Python3 support.
  $ nvim
  :UpdateRemotePlugins
 ```
+ $ sudo apt install clang # for c++
