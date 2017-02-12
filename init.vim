@@ -25,9 +25,7 @@ if dein#load_state(s:dein_dir)
   call dein#end()
   call dein#save_state()
 endif
-" プラグインの追加・削除やtomlファイルの設定を変更した後は
-" 適宜 call dein#update や call dein#clear_state を呼んでください。
-" vimprocだけは最初にインストールしてほしい
+"call dein#update and  call dein#clear_state 
 if dein#check_install(['vimproc'])
   call dein#install(['vimproc'])
 endif
@@ -37,8 +35,13 @@ if dein#check_install()
 endif
 " }}}
 
+
 " enable true color
 set termguicolors
+
+
+""" copy from .vimrc  """
+
 set nocompatible "viとの互換性をなくす"
 set autoindent "改行時に前の行のインデントを継続する"
 set smartcase "改行時にスマートなインデントを行う"
@@ -59,4 +62,4 @@ set tabstop=4 "<tab>が対応する空白の数"
 set showmatch "対応する括弧を表示"
 set shiftwidth=4
 set expandtab
-
+"""""""""""""""""""""""""
