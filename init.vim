@@ -38,6 +38,7 @@ endif
 
 " enable true color
 set termguicolors
+colorscheme tender
 
 
 """ copy from .vimrc  """
@@ -56,7 +57,6 @@ set number "行番号表示"
 set noswapfile
 
 "syntax enable
-"colorscheme hybrid
 
 set tabstop=4 "<tab>が対応する空白の数"
 set showmatch "対応する括弧を表示"
