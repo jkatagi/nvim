@@ -33,4 +33,4 @@ hook_source = 'let g:clang_c_options = "-std=c11"'
 hook_source = 'let g:clang_cpp_options = "-std=c++1z -stdlib=libc++ --pedantic-errors"'
 
 [[plugins]]
-repo = 'nathanaelkane/vim-indent-guides'
+repo = 'Yggdroot/indentLine'
