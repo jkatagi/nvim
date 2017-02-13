@@ -11,7 +11,9 @@ hook_add = 'let g:deoplete#enable_at_startup = 1'
 
 # color setting
 [[plugins]]
-repo = 'jacoborus/tender.vim'
+#repo = 'w0ng/vim-hybrid'
+#repo = 'jacoborus/tender.vim'
+repo = 'nanotech/jellybeans.vim'
 
 [[plugins]]
 repo =  'koalaman/shellcheck'
@@ -29,3 +31,6 @@ repo = 'jcf/vim-latex'
 repo = 'justmao945/vim-clang'
 hook_source = 'let g:clang_c_options = "-std=c11"'
 hook_source = 'let g:clang_cpp_options = "-std=c++1z -stdlib=libc++ --pedantic-errors"'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'

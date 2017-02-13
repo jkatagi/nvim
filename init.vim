@@ -36,9 +36,14 @@ endif
 " }}}
 
 
-" enable true color
-set termguicolors
-colorscheme tender
+" color setting """"""""""""""""
+colorscheme jellybeans
+
+"" use a guake backgroud setting
+let g:jellybeans_overrides = {
+\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+\}
+"""""""""""""""""""""""""""""""""
 
 
 """ copy from .vimrc
@@ -106,3 +111,4 @@ au BufNewFile,BufRead *.c inoremap {<Enter> {}<Left><CR><ESC><S-o>
 
 "C++で括弧の補完"
 au BufNewFile,BufRead *.cpp inoremap {<Enter> {}<Left><CR><ESC><S-o>
+
