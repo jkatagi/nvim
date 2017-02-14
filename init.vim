@@ -116,3 +116,6 @@ au BufNewFile,BufRead *.cpp inoremap {<Enter> {}<Left><CR><ESC><S-o>
 " for vim-indent
 set list listchars=tab:\¦\
 let g:indentLine_color_term = 239
+
+" enable clipboard
+set clipboard+=unnamedplus
