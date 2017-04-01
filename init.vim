@@ -36,8 +36,20 @@ endif
 " }}}
 
 
-" color setting """"""""""""""""
-colorscheme jellybeans
+" color setting 
+set background=dark
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1 
+colorscheme hybrid
+
+" TrueColor
+if has('patch-7.4.1778')
+  set guicolors
+endif
+if has('nvim')
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
 
 "" use a guake backgroud setting
 let g:jellybeans_overrides = {
