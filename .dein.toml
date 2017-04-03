@@ -11,9 +11,10 @@ hook_add = 'let g:deoplete#enable_at_startup = 1'
 
 # color setting
 [[plugins]]
+repo = 'nanotech/jellybeans.vim'
 #repo = 'w0ng/vim-hybrid'
 #repo = 'jacoborus/tender.vim'
-repo = 'nanotech/jellybeans.vim'
+#repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
 repo =  'koalaman/shellcheck'
@@ -34,3 +35,6 @@ hook_source = 'let g:clang_cpp_options = "-std=c++1z -stdlib=libc++ --pedantic-e
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'zchee/deoplete-go'
