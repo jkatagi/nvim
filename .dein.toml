@@ -36,5 +36,9 @@ hook_source = 'let g:clang_cpp_options = "-std=c++1z -stdlib=libc++ --pedantic-e
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 
+# for go lang.
 [[plugins]]
 repo = 'zchee/deoplete-go'
+
+[[plugins]]
+repo = 'faith/vim-go'
