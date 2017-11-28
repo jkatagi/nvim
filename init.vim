@@ -100,7 +100,7 @@ let g:Tex_MakeIndexFlavor = 'mendex $*.idx'
 let g:Tex_UseEditorSettingInDVIViewer = 1
 let g:Tex_ViewRule_dvi = 'pxdvi -watchfile 1'
 let g:Tex_ViewRule_ps = 'gv --watch'
-let g:Tex_ViewRule_pdf = 'evince'
+let g:Tex_ViewRule_pdf = 'atril'
 let g:Tex_AutoFolding = 0
 let g:Tex_IgnoredWarnings =
     \'Underfull'."\n".
@@ -124,3 +124,13 @@ let g:indentLine_color_term = 239
 " enable clipboard
 set clipboard+=unnamedplus
 
+
+" keymapping
+noremap <S-h> ^
+noremap <S-l> $
+noremap <S-j> j
+noremap <S-k> k
+noremap j gj
+noremap k gk
+
+let g:tex_conceal=''
