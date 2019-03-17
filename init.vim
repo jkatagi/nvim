@@ -26,9 +26,9 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 "call dein#update and  call dein#clear_state 
-if dein#check_install(['vimproc'])
-  call dein#install(['vimproc'])
-endif
+" if dein#check_install(['vimproc'])
+"   call dein#install(['vimproc'])
+" endif
 " その他インストールしていないものはこちらに入れる
 if dein#check_install()
   call dein#install()
@@ -41,21 +41,22 @@ set background=dark
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 
 colorscheme hybrid
+hi Visual term=reverse cterm=reverse guibg=Grey
 
 " TrueColor
-if has('patch-7.4.1778')
-  set guicolors
-endif
+" if has('patch-7.4.1778')
+"   set guicolors
+" endif
 if has('nvim')
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 
 
-"" use a guake backgroud setting
+" use a guake backgroud setting
 let g:jellybeans_overrides = {
 \    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
 \}
-"""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""
 
 
 """ copy from .vimrc
@@ -100,7 +101,7 @@ let g:Tex_MakeIndexFlavor = 'mendex $*.idx'
 let g:Tex_UseEditorSettingInDVIViewer = 1
 let g:Tex_ViewRule_dvi = 'pxdvi -watchfile 1'
 let g:Tex_ViewRule_ps = 'gv --watch'
-let g:Tex_ViewRule_pdf = 'atril'
+let g:Tex_ViewRule_pdf = 'evince'
 let g:Tex_AutoFolding = 0
 let g:Tex_IgnoredWarnings =
     \'Underfull'."\n".
@@ -132,5 +133,11 @@ noremap <S-j> j
 noremap <S-k> k
 noremap j gj
 noremap k gk
+" %% -> %:h<Tab>
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 let g:tex_conceal=''
+
+set guicursor=
+let g:go_template_autocreate = 0
+set autowrite
