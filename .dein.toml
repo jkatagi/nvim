@@ -119,3 +119,9 @@ repo = 'majutsushi/tagbar'
 depends = 'ctags'
 hook_add = 'let g:tagbar_autofocus = 1'
 hook_add = 'let g:tagbar_autoclose = 1'
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
+
+[[plugins]]
+repo = "tpope/vim-fugitive"
