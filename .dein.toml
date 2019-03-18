@@ -68,6 +68,13 @@ repo = 'zchee/deoplete-go'
 
 [[plugins]]
 repo = 'fatih/vim-go'
+depends = 'SirVer/ultisnips'
+hook_add = 'let g:UltiSnipsExpandTrigger = "<tab>"'
+hook_add = 'let g:UltiSnipsJumpForwardTrigger = "<tab>"'
+hook_add = 'let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"'
+
+[[plugins]]
+repo = 'SirVer/ultisnips'
 
 [[plugins]]
 repo = 'golang/lint'
@@ -97,3 +104,24 @@ repo = 'sebdah/vim-delve'
 
 [[plugins]]
 repo = 'posva/vim-vue'
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+merged = ''
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+depends = 'ctags'
+hook_add = 'let g:tagbar_autofocus = 1'
+hook_add = 'let g:tagbar_autoclose = 1'
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
+
+[[plugins]]
+repo = "tpope/vim-fugitive"
