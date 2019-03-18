@@ -141,3 +141,5 @@ let g:tex_conceal=''
 set guicursor=
 let g:go_template_autocreate = 0
 set autowrite
+
+nmap <F8> :TagbarToggle<CR>
