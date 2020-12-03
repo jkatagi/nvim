@@ -151,4 +151,5 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.md setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.hql setlocal filetype=hive tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.rego setlocal tabstop=4 softtabstop=4 shiftwidth=2
 augroup END
