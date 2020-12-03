@@ -72,6 +72,7 @@ depends = 'SirVer/ultisnips'
 hook_add = 'let g:UltiSnipsExpandTrigger = "<tab>"'
 hook_add = 'let g:UltiSnipsJumpForwardTrigger = "<tab>"'
 hook_add = 'let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"'
+hook_add = 'let g:go_fmt_command = "goimports"'
 
 [[plugins]]
 repo = 'SirVer/ultisnips'
@@ -125,3 +126,9 @@ repo = "airblade/vim-gitgutter"
 
 [[plugins]]
 repo = "tpope/vim-fugitive"
+
+[[plugins]]
+repo = "autowitch/hive.vim"
+
+[[plugins]]
+repo = "hashivim/vim-terraform"
