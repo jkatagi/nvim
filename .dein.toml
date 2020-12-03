@@ -132,3 +132,6 @@ repo = "autowitch/hive.vim"
 
 [[plugins]]
 repo = "hashivim/vim-terraform"
+
+[[plugins]]
+repo = "tsandall/vim-rego"
