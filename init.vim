@@ -143,3 +143,12 @@ let g:go_template_autocreate = 0
 set autowrite
 
 nmap <F8> :TagbarToggle<CR>
+
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.yml setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.md setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.hql setlocal filetype=hive tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
