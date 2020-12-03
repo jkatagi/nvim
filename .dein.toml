@@ -73,6 +73,7 @@ hook_add = 'let g:UltiSnipsExpandTrigger = "<tab>"'
 hook_add = 'let g:UltiSnipsJumpForwardTrigger = "<tab>"'
 hook_add = 'let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"'
 hook_add = 'let g:go_fmt_command = "goimports"'
+hook_add = 'let g:go_metalinter_autosave = 1'
 
 [[plugins]]
 repo = 'SirVer/ultisnips'
